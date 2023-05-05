@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LoginView from '../views/LoginView.vue'
+import LandingView from '../views/LandingPageView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import ProfileView from '../views/ProfileView.vue'
 import NewAnimalView from '../views/NewAnimalView.vue'
@@ -12,6 +13,11 @@ const routes = [
     path: '/login',
     name: 'login-view',
     component: LoginView
+  },
+  {
+    path: '/',
+    name: 'LandingPage-view',
+    component: LandingView
   },
   {
     path: '/register',

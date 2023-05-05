@@ -1,26 +1,12 @@
 <template>
 	<v-app>
-		<v-app-bar app color="primary" dark>
-			<div class="d-flex align-center">
-				<v-img
-					alt="Vuetify Logo"
-					class="shrink mr-2"
-					contain
-					src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-					transition="scale-transition"
-					width="40" />
-
-				<v-img
-					alt="Vuetify Name"
-					class="shrink mt-1 hidden-sm-and-down"
-					contain
-					min-width="100"
-					src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-					width="100" />
-			</div>
+		<v-app-bar app color="yellow" 
+		
+		style="text-align: right; color: white;">
+		<h1 style="text-shadow: 2px 2px #000000;">AS</h1>
 			<v-spacer></v-spacer>
-			<v-btn text to="/">Landing</v-btn>
-			<v-btn v-show="isAuthenticated" text to="/animal">New Animal</v-btn>
+			
+			<v-btn v-show="isAuthenticated" text to="/animal" style="text-align: right; ">New Animal</v-btn>
 			<v-btn v-show="false && isAuthenticated" text to="/profile">
 				Profile
 			</v-btn>
@@ -36,11 +22,13 @@
 		<v-main>
 			<router-view />
 		</v-main>
+		<bottomBar></bottomBar>
 	</v-app>
 </template>
 
 <script>
 import { auth, getAuth, onAuthStateChanged, signOut } from "../firebase.js";
+import bottomBar from '@/components/bottomBarView.vue';
 export default {
 	name: "App",
 	data() {
@@ -64,7 +52,7 @@ export default {
 				});
 		},
 	},
-	beforeCreate() {
+	beforeCreate() {59+
 		onAuthStateChanged(auth, (user) => {
 			if (user) {
 				console.log("Authenticated");
@@ -75,6 +63,10 @@ export default {
 			}
 		});
 	},
+	components:
+    {
+        bottomBar
+    },
 };
 </script>
 <style scoped></style>
