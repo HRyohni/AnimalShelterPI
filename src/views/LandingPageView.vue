@@ -52,7 +52,7 @@
                 color="yellow"
                 
                 elevation="2">
-                <v-card-title style="font-size: 30px;">Choose a Friend</v-card-title>
+                <v-card-title style="font-size: 2vh;">Choose a Friend</v-card-title>
                 <v-img  src="../assets/icons/search.png" 
                 max-height="8vw"
                 max-width="8vw"  class="pa-12 -flex justify-center mb-6 bg-surface-variant" style="margin-left: auto; margin-right: auto;"></v-img>
@@ -66,7 +66,7 @@
                 color="yellow"
                 
                 elevation="2">
-                <v-card-title style="font-size: 30px;">Meet us</v-card-title>
+                <v-card-title style="font-size: 2vh;">Meet us</v-card-title>
                 <v-img src="../assets/icons/house.png" 
                 max-height="8vw"
                 max-width="8vw"  class="pa-12 -flex justify-center mb-6 bg-surface-variant" style="margin-left: auto; margin-right: auto;"></v-img>
@@ -81,7 +81,7 @@
                 color="yellow "
                 
                 elevation="2">
-                <v-card-title style="font-size: 30px;">Fill the adoption form</v-card-title>
+                <v-card-title style="font-size: 2vh;">Fill the adoption form</v-card-title>
                 <v-img src="../assets/icons/note.png" 
                 max-height="8vw"
                 max-width="8vw"  class="pa-12 -flex justify-center mb-6 bg-surface-variant" style="margin-left: auto; margin-right: auto;"></v-img>
@@ -96,7 +96,7 @@
                 color="yellow"
                 
                 elevation="2">
-                <v-card-title style="font-size: 30px;">Take your friend home!</v-card-title>
+                <v-card-title style="font-size: 2vh;">Take your friend home!</v-card-title>
                 <v-img src="../assets/icons/doggo.png" 
                 max-height="8vw"
                 max-width="8vw"  class="pa-12 -flex justify-center mb-6 bg-surface-variant" style="margin-left: auto; margin-right: auto;"></v-img>
@@ -179,7 +179,7 @@ export default{
 padding: 0px;}
 .naslov
 {
-background-color: yellow;
+background-color: #FFF44F;
 width: 100%;
 background-size: cover;
 height: 600px;
