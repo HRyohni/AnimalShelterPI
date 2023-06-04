@@ -1,14 +1,17 @@
 <template>
-  <div class="bottom pa-10" >
+  <div class="bottom pa-4" >
     <v-row >
 <v-col >
-    About
+  <h3>About</h3>
+    
 </v-col>
 <v-col>
-    contact
+  <h3>Contact</h3>
+   
 </v-col>
 <v-col>
-     licence   
+  <h3>Licence</h3>
+     
 </v-col>
     </v-row>
   </div>
@@ -22,12 +25,18 @@ export default {
 
 <style>
 .bottom
-{
+{ color: black;
     background-color: rgb(59, 54, 54);
     width: 100%;
-    color: aliceblue;
+    height: auto;
+   
     text-align: center;
-    height: 150px;
+  
     padding: 20px;
+
+
+
+    background-color: #FFD535;
+
 }
 </style>

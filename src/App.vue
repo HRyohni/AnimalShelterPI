@@ -16,7 +16,7 @@
 			</v-btn>
 			<v-btn v-show="isAuthenticated" @click="signOut" text>Logout</v-btn>
 
-			<v-spacer></v-spacer>
+			
 		</v-app-bar>
 
 		<v-main>

@@ -1,45 +1,39 @@
 <template>
-    <v-card
-    class="mx-auto"
-    max-width="344"
-  >
-    <v-img
-      src="../assets/goodBoys/dog1.jpg"
-      height="200px"
-      cover
-    ></v-img>
+  <v-card class="mx-auto" max-width="344">
+    <v-img :src= tempUrl   cover></v-img>
 
-    <v-card-title>
-      Meet {{ name }}
-    </v-card-title>
+    <v-card-title> Meet {{ name }} </v-card-title>
 
-    <v-card-subtitle>
-      {{pasmina}}
-    </v-card-subtitle>
+ 
 
     <v-card-actions>
-      <v-btn
-        color="orange-lighten-2"
-        variant="text"
-        dark
-      >
-        Adopt
-      </v-btn>
+      <v-btn color="orange-lighten-2" variant="text" dark> Adopt </v-btn>
 
       <v-spacer></v-spacer>
 
       <v-btn
-        :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+        
         @click="show = !show"
-      ></v-btn>
+      >
+      <div
+      v-show="!show"
+      >more</div>
+    
+      <div
+      v-show="show"
+      >less</div>
+    </v-btn>
+      
     </v-card-actions>
 
     <v-expand-transition>
+      
       <div v-show="show">
-        <v-divider></v-divider>
+        
+        <v-divider> </v-divider>
 
         <v-card-text>
-          I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat nemo cumque earum! Eum impedit sit ut, iusto eius magni sunt enim ipsa vitae animi sapiente error voluptatibus eaque quas officia.
         </v-card-text>
       </div>
     </v-expand-transition>
@@ -48,13 +42,41 @@
 
 <script>
 export default {
-  props: {
-    name: String,
-    pasmina: String
+  props:  ["name","filename"],
+  methods:
+  {
+    setData ()
+    {
+        this.Dogname = this.name;
+        this.Typefilename = this.filename;
+
+    },
+    setUrl ()
+    {
+      let url = "../assets/goodBoys/" + this.filename + ".jpg";
+      this.url = url;
+      console.log(this.url)
+      return url;
+    },
+    mounted ()
+    {
+      this.setData();
+    }
+
+  },
+  data() {
+
+    return {
+      Dogname : null,
+      Typefilename : null,
+      show: null,
+      url : null,
+      icon : true,
+      tempUrl: this.filename,
+    
+    }
   }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
